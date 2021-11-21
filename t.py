@@ -61,6 +61,7 @@ while True:
      print (nowminute)
      if port == 65534:
        port = 1
-     #if sent == limit:
-        if nowminute == stopminute: 
-          sys.exit()
+       
+       # if sent == limit:
+       # if nowminute == stopminute: 
+       # sys.exit()
