@@ -60,11 +60,11 @@ igonext = ''
 print
 igonext = input('Изминить максимальное кол-во пакетов(Да/Нет): ')
 if igonext[1] == 'Д':
-                        print
-                        maxpack = int(input('Сколько пакетов отправить: '))
-                        mil = maxpack
-      else:
-           mil = 1000000
+            print
+            maxpack = int(input('Сколько пакетов отправить: '))
+            mil = maxpack
+            else:
+                        mil = 1000000
 print()
 print('##########################################')
 
