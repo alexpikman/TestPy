@@ -19,14 +19,27 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
 #############
 
+ip_list = []
+ais = socket.getaddrinfo("www.yahoo.com",0,0,0,0)
+for result in ais:
+  ip_list.append(result[-1][0])
+ip_list = list(set(ip_list))
+
+
 os.system("clear")
+
+
+
+
 print ('Wellcome to PQcyber softing')
 print
 site = int(input('Адрес сайта:'))
 print
-nslookup("site")
-print
-ip = int(input('IP: '))
+ip = socket.gethostbyname_ex(site)
+print ('Site IP: ')
+print(ip)
+#print
+#ip = int(input('IP: '))
 print
 port = int(input('port: '))
 
