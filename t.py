@@ -33,7 +33,7 @@ os.system("clear")
 
 print ('Wellcome to PQcyber softing')
 print
-site = raw_input("Адрес сайта:")
+site = raw_input('Адрес сайта:')
 #site = int(input('Адрес сайта:'))
 print
 ip = socket.gethostbyname_ex(site)
