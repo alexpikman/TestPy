@@ -62,7 +62,7 @@ while True:
             port = port + 1
             #nowhour = now.hour*1
             nowminute = now.minute*1 
-     print ('s%:s%  >>> sent packet #s% to %s on port:%s'%(hour,nowminute,sent,ip,port))
+     print ('time s%h s%m sent packet: s% to %s on port:%s'%(hour,nowminute,sent,ip,port))
      #print (nowminute)
      if port == 65534:
         port = 1
