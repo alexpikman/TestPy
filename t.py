@@ -58,9 +58,11 @@ while True:
      sock.sendto(bytes, (ip,port))
      sent = sent + 1
      port = port + 1
-     nowminute = now.minute*1
-            TIME = datetime.now()
-     print ('s%  sent packet #s% to %s on port:%s'%(TIME,sent,ip,port))
+    
+            nowhour = now.hour*1
+            nowminute = now.minute*1
+    
+     print ('s%:s%  >>> sent packet #s% to %s on port:%s'%(nowhour,nowminute,sent,ip,port))
      #print (nowminute)
      if port == 65534:
        port = 1
