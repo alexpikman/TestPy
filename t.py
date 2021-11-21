@@ -22,6 +22,7 @@ limit = 0
 app = 0
 port = 0
 stopminute = 0
+nowhour = 0
 nowminute = 0
 
 print('##########################################')
