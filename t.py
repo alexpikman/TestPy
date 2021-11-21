@@ -3,6 +3,7 @@ import os
 import time
 import socket
 import random
+import nslookup 
 os.system("clear")
 #Code Time
 from datetime import datetime
@@ -19,9 +20,9 @@ bytes = random._urandom(1490)
 #############
 
 os.system("clear")
-print ('Адрес сайта:')
+print ('Wellcome to PQcyber softing')
 print
-site = int(input('http:\\'))
+site = int(input('Адрес сайта:'))
 print
 nslookup("site")
 print
