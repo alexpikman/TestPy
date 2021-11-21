@@ -57,9 +57,9 @@ while True:
             now = datetime.now()
             nowminute = now.minute
             print('Stop attack in %s:%s'%(hour,stopminute))
+            port = port + 1
             sock.sendto(ibytes, (ip,port))
             sent = sent + 1
-            port = port + 1
             stopattack = mil - sent 
             print('     [pack %s] remained %s'%(sent,stopattack))
             
