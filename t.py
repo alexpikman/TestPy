@@ -20,7 +20,8 @@ bytes = random._urandom(1490)
 
 os.system("clear")
 print ('Адрес сайта:')
-       site = int(input('http:\\'))
+print
+site = int(input('http:\\'))
 print
 nslookup("site")
 print
