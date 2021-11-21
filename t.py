@@ -79,5 +79,5 @@ while True:
                         
             if nowminute == stopminute:
                         sys.exit()
-                        if sent = mil:
+                        if sent == mil:
                                     break
