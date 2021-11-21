@@ -28,14 +28,16 @@ bytes = random._urandom(1490)
 #  ip_list = list(set(ip_list))
 
 print
-site = input('Адрес сайта:')
-print
+site = input('Адрес сайта: ')
+ip = []
 ip = socket.gethostbyname_ex(site)
+# for result in ip:
+# ip.append(result[-1][0])     
 
 print(ip[1])
-print(ip[3])
-print(site[2])
-print(site[3])
+#print(ip[3])
+#print(site[2])
+#print(site[3])
 
 print ('Site IP: ')
 print(ip)
