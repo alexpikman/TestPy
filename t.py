@@ -20,7 +20,7 @@ bytes = random._urandom(1490)
 
 os.system("clear")
 print (day,' ',month,' ',year) 
-
+print
 ip = int(input('IP: '))
 port = int(input('port: '))
 
@@ -33,7 +33,6 @@ while True:
      print ('Sent %s packet to %s throught port:%s'%(sent,ip,port))
      if port == 65534:
        port = 1
-     if count = sent: a = 1
 
 a = int(input('Number?'))
 if a < -5:
