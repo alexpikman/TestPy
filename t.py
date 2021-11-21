@@ -57,15 +57,14 @@ print('##########################################')
 nowhour = 0
 nowminute = 0
 
-#nowhour = now.hour*1
-#nowminute = now.minute*1
-#print('time %s:%s'%(nowhour,nowminute))
-
+##nowhour = now.hour*1
+##nowminute = now.minute*1
+##print('time %s:%s'%(nowhour,nowminute))
+##print "sent packet: s% to %s on port:%s"%(sent,ip,port)
 while True:
             sock.sendto(bytes, (ip,port))
             sent = sent + 1
             port = port + 1
-            print "sent packet: s% to %s on port:%s"%(sent,ip,port)
             nowminute = now.minute*1
             if port == 65534:
                         port = 1
