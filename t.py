@@ -3,7 +3,7 @@ import os
 import time
 import socket
 import random
-import nslookup 
+
 os.system("clear")
 #Code Time
 from datetime import datetime
@@ -19,11 +19,11 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
 #############
 
-ip_list = []
-ais = socket.getaddrinfo("www.yahoo.com",0,0,0,0)
-for result in ais:
-  ip_list.append(result[-1][0])
-ip_list = list(set(ip_list))
+#  ip_list = []
+#  ais = socket.getaddrinfo("www.yahoo.com",0,0,0,0)
+#  for result in ais:
+#  ip_list.append(result[-1][0])
+#  ip_list = list(set(ip_list))
 
 
 os.system("clear")
