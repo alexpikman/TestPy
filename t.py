@@ -19,9 +19,13 @@ bytes = random._urandom(1490)
 #############
 
 os.system("clear")
-print (day,' ',month,' ',year) 
+print ('Адрес сайта:')
+       site = int(input('http:\\'))
+print
+nslookup("site")
 print
 ip = int(input('IP: '))
+print
 port = int(input('port: '))
 
 sent = 0
