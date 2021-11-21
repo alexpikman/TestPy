@@ -20,6 +20,7 @@ bytes = random._urandom(1490)
 
 sent = 0
 limit = 0
+app = 0
 
 print('##########################################')
 print ('Wellcome to PQcyberSPAM softing')
