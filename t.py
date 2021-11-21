@@ -5,6 +5,8 @@ import socket
 import random
 
 os.system("clear")
+
+print ('Wellcome to PQcyber softing')
 #Code Time
 from datetime import datetime
 now = datetime.now()
@@ -26,14 +28,13 @@ bytes = random._urandom(1490)
 #  ip_list = list(set(ip_list))
 
 
-os.system("clear")
+#os.system("clear")
 
 
 
 
-print ('Wellcome to PQcyber softing')
 print
-site = raw_input('Адрес сайта:')
+site = input('Адрес сайта:')
 #site = int(input('Адрес сайта:'))
 print
 ip = socket.gethostbyname_ex(site)
