@@ -37,7 +37,7 @@ print
 print
 app = int(input('select a number to launch the app'))
 print
-if app = 1:
+if app = int(1):
     print
 site = input('Имя сайта: ')
 ip = socket.gethostbyname(site) 
