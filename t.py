@@ -60,10 +60,9 @@ while True:
      port = port + 1
      nowminute = now.minute*1
      print ('Sent %s packet to %s throught port:%s'%(sent,ip,port))
-     print (nowminute)
+     #print (nowminute)
      if port == 65534:
        port = 1
-       
-       # if sent == limit:
-       # if nowminute == stopminute: 
-       # sys.exit()
+
+       if nowminute == stopminute: 
+       sys.exit()
