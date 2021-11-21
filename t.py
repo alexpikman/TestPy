@@ -1,4 +1,4 @@
-a = int(input())
+a = int(input("Number?"))
 if a < -5:
     print('Low')
 elif -5 <= a <= 5:
