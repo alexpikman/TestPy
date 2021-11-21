@@ -29,11 +29,11 @@ bytes = random._urandom(1490)
 
 print
 site = input('Адрес сайта: ')
-ip = []
-ip = socket.gethostbyname_ex(site)
+#ip = [sitename]
+ip = socket.gethostbyname(site)
 # for result in ip:
 # ip.append(result[-1][0])     
-
+print(ip)
 print(ip[1])
 #print(ip[3])
 #print(site[2])
