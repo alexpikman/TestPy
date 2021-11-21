@@ -36,7 +36,9 @@ print
 print
 app = int(input('select a number to launch the app'))
 
-if app = 1:
+ddosattack = 1
+
+if app = ddosattack :
     print
 site = input('Имя сайта: ')
 ip = socket.gethostbyname(site) 
