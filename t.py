@@ -57,7 +57,7 @@ print('Stop site attack in: %s:%s'%(hour,stopminute))
 print('Maximum: 1 000 000 packs')
 print()
 print
-      gonext = input('Изминить максимальное кол-во пакетов(Да/Нет): '))
+      gonext = input('Изминить максимальное кол-во пакетов(Да/Нет): ')
       if gonext[1] == 'Д':
                         print
                         maxpack = int(input('Сколько пакетов отправить: '))
