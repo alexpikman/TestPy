@@ -24,20 +24,18 @@ app = 0
 
 print('##########################################')
 print ('Wellcome to PQcyberSPAM softing')
-print
-print
+print()
+print()
 print ('Get SOFT')
 print ('[1] - DDoS Attack http://SITE')
 print ('[2] - SMS Bomber')
 print('##########################################')
-print
-print
-print
-
+print()
+print()
+print()
 print
 app = int(input('select a number to launch the app'))
-print
-if app = int(1):
+if app = 1:
     print
 site = input('Имя сайта: ')
 ip = socket.gethostbyname(site) 
