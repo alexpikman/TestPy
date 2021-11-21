@@ -63,8 +63,8 @@ if igonext[1] == 'Д':
             print
             maxpack = int(input('Сколько пакетов отправить: '))
             mil = maxpack
-            else:
-                        mil = 1000000
+if igonext[1] == 'Н':
+            mil = 1000000
 print()
 print('##########################################')
 
